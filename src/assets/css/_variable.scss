@@ -1,0 +1,142 @@
+/** 颜色 **/
+/* 品牌色*/
+$primary-color: #2270ff;
+
+$primary-bg-color: #FFFFFF;
+
+/* 品牌字体色*/
+$primary-text-color: white;
+// 灰色
+$primary-text-color-grey: #7A7A7A;
+/* 品牌延展色*/
+$primary-color-extend: #6CA0FF;
+/*辅助色*/
+$auxiliary-color: #2A2F38;
+$auxiliary-color-lighten-60: lighten($auxiliary-color, 60%);
+$auxiliary-color-lighten-30: lighten($auxiliary-color, 30%);
+$auxiliary-color-lighten-20: lighten($auxiliary-color, 20%);
+/*点缀色*/
+$ornament-color: #FFB222;
+/*状态色*/
+$success-color: #13D8B3;
+$fail-color: #FF5062;
+$warning-color: #FFAB48;
+/*分割线色*/
+$dicivider-color: #F0F0F0;
+/*背景色*/
+$background-color: #F5F7FA;
+/*表单背景色*/
+$form-field-background-color: #F4F5F7;
+/*轻提示背景色*/
+$toast-background-color-lighten-70: lighten(#2A2F38, 70%);
+/*弹出层非主体部分背景色*/
+$dialog-background-color-lighten-50: lighten(#2A2F38, 50%);
+
+/** 字体大小 **/
+$text-font-size-36: 36px;
+$text-font-size-32: 32px;
+$text-font-size-28: 28px;
+$text-font-size-24: 24px;
+$text-font-size-20: 20px;
+
+/**/
+$body-padding-x: 32px;
+$body-margin-y: 32px;
+$body-col-width: 26px;
+$body-col-spacing: 18px;
+
+$nav-row-height: 88px;
+$nav-row-padding-y: 4px;
+
+// 底部导航高度
+$bottom-nav-height: 170px;
+
+$body-row-spacing: 16px;
+
+$body-row-height-16: 16px;
+$body-row-height-40: 40px;
+$body-row-height-60: 60px;
+$body-row-height-88: 88px;
+$body-row-height-100: 100px;
+$body-row-height-108: 108px;
+$body-row-height-144: 144px;
+
+@mixin flex-row-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-row-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin flex-row-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font-1 {
+  font-size: $text-font-size-32;
+  font-weight: 600;
+}
+@mixin font-2 {
+  font-size: $text-font-size-28;
+  font-weight: 600;
+}
+@mixin font-3 {
+  font-size: $text-font-size-28;
+  font-weight: 300;
+}
+@mixin font-4 {
+  font-size: $text-font-size-24;
+  font-weight: 300;
+}
+
+/** 字体 **/
+@mixin text-2 {
+  @include font-2;
+  height: 40px;
+  line-height: 40px;
+}
+@mixin text-4 {
+  @include font-4;
+  height: 40px;
+  line-height: 40px;
+}
+
+@mixin button-1 {
+  @include font-1;
+  background-color: rgb(229,231,235);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  height: $body-row-height-60;
+  line-height: $body-row-height-60;
+  text-align: center;
+  color: $primary-color;
+  padding: 0px 10px;
+  font-weight: 400;
+}
+
+@mixin button-2 {
+  @include button-1;
+  background-color: $primary-color;
+  color: $primary-text-color;
+}
